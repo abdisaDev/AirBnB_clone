@@ -6,14 +6,14 @@ This project serves as the launchpad for your very own Airbnb clone! We'll begin
 
 #### How to use
 
-Run the console -> ./console.py
-Quit the console -> (hbnb) quit
-Display the help for a command -> (hbnb) help <command>
-Create an object (prints its id) -> (hbnb) create <class>
-Show an object -> (hbnb) show <class> <id> or (hbnb) <class>.show(<id>)
-Destroy an object -> (hbnb) destroy <class> <id> or (hbnb) <class>.destroy(<id>)
-Show all objects, or all instances of a class -> (hbnb) all or (hbnb) all <class>
-Update an attribute of an object -> (hbnb) update <class> <id> <attribute name> "<attribute value>" or (hbnb) <class>.update(<id>, <attribute name>, "<attribute value>")
+Run the console -> ./console.py <br />
+Quit the console -> (hbnb) quit <br />
+Display the help for a command -> (hbnb) help <command> <br />
+Create an object (prints its id) -> (hbnb) create <class> <br />
+Show an object -> (hbnb) show <class> <id> or (hbnb) <class>.show(<id>) <br />
+Destroy an object -> (hbnb) destroy <class> <id> or (hbnb) <class>.destroy(<id>) <br />
+Show all objects, or all instances of a class -> (hbnb) all or (hbnb) all <class> <br />
+Update an attribute of an object -> (hbnb) update <class> <id> <attribute name> "<attribute value>" or (hbnb) <class>.update(<id>, <attribute name>, "<attribute value>") <br />
 
 #### Interactive Mode Example
 
