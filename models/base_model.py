@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """ Base Model Module """
 import uuid
-import datetime
+from datetime import datetime
 
 
 class BaseModel:
     """ BaseModel Class """
-    __date = datetime.datetime.now().isoformat()
+    __date_iso_formated = datetime.now().isoformat()
+    __date = datetime.now()
 
     def __init__(self) -> None:
         self.id = str(uuid.uuid4())
@@ -20,4 +21,20 @@ class BaseModel:
         self.updated_at = self.__date
 
     def to_dict(self):
-        return self.__dict__
+        dict = self.__dict__
+        dict["__class__"] = self.__class__.__name__
+        dict["created_at"] = self.__date_iso_formated
+        dict["updated_at"] = self.__date_iso_formated
+        return dict
+
+my_model = BaseModel()
+my_model.name = "My First Model"
+my_model.my_number = 89
+print(my_model)
+my_model.save()
+print(my_model)
+my_model_json = my_model.to_dict()
+print(my_model_json)
+print("JSON of my_model:")
+for key in my_model_json.keys():
+    print("\t{}: ({}) - {}".format(key, type(my_model_json[key]), my_model_json[key]))
