@@ -24,6 +24,7 @@ class BaseModel:
                 if key == "updated_at" or key == "created_at":
                     value = datetime.fromisoformat(value)
                 setattr(self, key, value)
+            return
 
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
