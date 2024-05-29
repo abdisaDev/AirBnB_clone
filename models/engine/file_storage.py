@@ -17,6 +17,7 @@ class FileStorage:
         print(self.__objects)
 
     def save(self):
+        print(FileStorage.__objects)
         with open(FileStorage.__file_path, "w") as file:
             json.dump(FileStorage.__objects, file)
 
